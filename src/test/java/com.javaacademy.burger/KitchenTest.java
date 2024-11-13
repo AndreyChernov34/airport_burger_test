@@ -47,10 +47,7 @@ public class KitchenTest {
     public void KitchenHasNoGasExceptionTest() {
         DishType dishType = DishType.BURGER;
         kitchen.setHasGas(false);
-        Assertions.assertThrows(KitchenHasNoGasException.class, ()->
-        {
-            kitchen.cook(dishType);
-        });
+        Assertions.assertThrows(KitchenHasNoGasException.class, ()-> kitchen.cook(dishType));
     }
 
     /**
@@ -60,10 +57,7 @@ public class KitchenTest {
     @Test
     public void FuagraTest() {
         DishType dishType = DishType.FUAGRA;
-        Assertions.assertThrows(UnsupportedDishTypeException.class,
-                () -> {
-            kitchen.cook(dishType);
-        });
+        Assertions.assertThrows(UnsupportedDishTypeException.class, ()-> kitchen.cook(dishType));
 
     }
 
