@@ -13,6 +13,7 @@ import static com.javaacademy.burger.dish.DishType.FUAGRA;
 @Slf4j
 public class Waitress {
 
+
     /**
      * Передача заказа на кухню
      */
