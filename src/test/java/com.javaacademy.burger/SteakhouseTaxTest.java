@@ -1,13 +1,10 @@
 package com.javaacademy.burger;
 
-import com.javaacademy.burger.dish.Dish;
 import com.javaacademy.burger.dish.DishType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
-
 import java.math.BigDecimal;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -32,7 +29,7 @@ public class SteakhouseTaxTest {
 
     @BeforeEach
     public void setUp() {
-        kitchen = Mockito.mock(Kitchen.class); ;
+        kitchen = Mockito.mock(Kitchen.class);
         waitress = Mockito.mock(Waitress.class);
         payTerminal = Mockito.spy(new PayTerminal());
         steakhouse = new Steakhouse(waitress, kitchen, payTerminal);
@@ -79,7 +76,6 @@ public class SteakhouseTaxTest {
      */
     @Test
     public void TaxMozambicTest() {
-        PayTerminal payTerminalSpy = new PayTerminal();
 
         DishType dishType = DishType.BURGER;
         Currency currency = Currency.MOZAMBICAN_DOLLARS;

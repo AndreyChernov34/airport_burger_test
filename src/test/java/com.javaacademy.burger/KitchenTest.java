@@ -4,17 +4,13 @@ import com.javaacademy.burger.dish.Dish;
 import com.javaacademy.burger.dish.DishType;
 import com.javaacademy.burger.exception.KitchenHasNoGasException;
 import com.javaacademy.burger.exception.UnsupportedDishTypeException;
-import lombok.Getter;
+
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
 import java.util.Queue;
 
 @Slf4j
@@ -51,7 +47,8 @@ public class KitchenTest {
     public void KitchenHasNoGasExceptionTest() {
         DishType dishType = DishType.BURGER;
         kitchen.setHasGas(false);
-        Assertions.assertThrows(KitchenHasNoGasException.class, ()-> {
+        Assertions.assertThrows(KitchenHasNoGasException.class, ()->
+        {
             kitchen.cook(dishType);
         });
     }
@@ -63,7 +60,8 @@ public class KitchenTest {
     @Test
     public void FuagraTest() {
         DishType dishType = DishType.FUAGRA;
-        Assertions.assertThrows(UnsupportedDishTypeException.class, ()-> {
+        Assertions.assertThrows(UnsupportedDishTypeException.class,
+                () -> {
             kitchen.cook(dishType);
         });
 
