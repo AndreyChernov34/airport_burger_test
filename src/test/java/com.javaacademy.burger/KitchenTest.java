@@ -4,16 +4,12 @@ import com.javaacademy.burger.dish.Dish;
 import com.javaacademy.burger.dish.DishType;
 import com.javaacademy.burger.exception.KitchenHasNoGasException;
 import com.javaacademy.burger.exception.UnsupportedDishTypeException;
-
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Queue;
 
-@Slf4j
 public class KitchenTest {
 
     private Kitchen kitchen;

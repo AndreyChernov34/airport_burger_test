@@ -1,15 +1,12 @@
 package com.javaacademy.burger;
-
 import com.javaacademy.burger.dish.DishType;
 import com.javaacademy.burger.exception.NotAcceptedCurrencyException;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.math.BigDecimal;
 
-@Slf4j
+
 public class PayTerminalTest {
     private PayTerminal payTerminal;
 

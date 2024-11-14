@@ -25,6 +25,7 @@ public class SteakhouseTaxTest {
     private Waitress waitress;
     private PayTerminal payTerminal;
     private Steakhouse steakhouse;
+    // условная еденица
     private static final BigDecimal UNIT = BigDecimal.ONE;
 
     @BeforeEach
